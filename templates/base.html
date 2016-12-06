@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% block head %}
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		{% endblock %}
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-static-top">
+		  <div class="container">
+			<div class="navbar-header">
+			  <a class="navbar-brand" href="{{ url_for('index') }}">Plotto Generator</a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="{{ url_for('about') }}">About</a></li>
+				</ul>
+			</div>
+		  </div>
+		</nav>
+		
+		{% block content %}{% endblock %}
+
+		<div class="container">
+			<div class="row">
+				<hr>
+				<footer class="footer">
+					<style>
+					footer {
+						text-align: center;
+						font-size: .7em;
+					}
+					</style>
+				{% block footer %}
+					<p>
+						Plotto content from <em>Plotto</em> by William Wallace Cook published 1928 by Ellis Publishing Co., Battle Creek, MI
+						<br>
+						Website &copy John Gerace 2016 -
+					</p>
+				{% endblock %}
+				</footer>
+			</div>
+		</div>
+	</body>	
+</html>

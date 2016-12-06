@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <div class="col-sm-9 col-md-10 main">
+    <div class="row placeholders">
+    <h2 class="sub-header">Terminations</h2>
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <tbody>
+              {% for t in terminations %}
+              <tr>
+                <td>{{ terminations[t] }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+</html>
